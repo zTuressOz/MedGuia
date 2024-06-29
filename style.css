@@ -1,0 +1,250 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --titulo-rgb: linear-gradient(to left, rgb(1, 104, 117), rgb(7, 97, 201), rgb(1, 104, 117));
+    --botao-transicao: linear-gradient(to left, rgb(2, 152, 172), rgb(3, 113, 238), rgb(2, 152, 172));
+    --menu-rgb:linear-gradient(to bottom, rgb(1, 104, 117), rgb(7, 97, 201), rgb(1, 104, 117));
+    --branco: white;
+    --borda-cabecalho: #00ACC1;
+    --verde-escuro: rgb(1, 66, 36);
+    --azul: rgb(7, 97, 201);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background: linear-gradient(to right, #212121 50%, #1565C0 50%);
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: var(--titulo-rgb);
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 10px solid var(--borda-cabecalho);
+}
+
+#h-titulo {
+    display: flex;
+    flex: 1;
+    margin-left: 200px;
+}
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 90px;
+    margin-left: 20px ;
+    color: var(--branco);
+}
+
+.logo{
+    position: absolute;
+    left: 75px;
+}
+
+h2{
+    font-family: "Rubik", sans-serif;
+    text-align: center;
+    margin-top: 75px;
+    font-size: 45px;
+    color: rgb(255, 255, 255);
+}
+
+h3{
+    font-family: "Rubik", sans-serif;
+    margin-top: 75px;
+    margin-left: 90px;
+    font-size: 35px;
+    color: var(--azul);
+}
+
+.texto-mapa{
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.topicos{
+    font-family: "Rubik", sans-serif;
+    color: rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-left: 150px;
+    font-size: 25px;
+}
+
+.container {
+    position: fixed; 
+    top: 20px; 
+    left: 15px; 
+    display: flex;
+    align-items: center;
+    z-index: 2000; 
+}
+
+#checkbox-menu {
+    position: absolute;
+    opacity: 0;
+}
+
+label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 60px;
+    z-index: 2001; 
+}
+
+label span {
+    position: absolute;
+    display: block;
+    height: 10px;
+    width: 100%;
+    border-radius: 30px;
+    background: white;
+    transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1) {
+    top: 0;
+}
+
+label span:nth-child(2) {
+    top: 15px;
+}
+
+label span:nth-child(3) {
+    top: 30px;
+}
+
+#checkbox-menu:checked + label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 15px;
+}
+
+#checkbox-menu:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+
+#checkbox-menu:checked + label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 15px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    background: var(--menu-rgb);
+    width: 15vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -40vw; 
+    transition: 0.4s;
+    z-index: 1000; 
+}
+
+.texto-menu{
+    font-family: "Varela Round", sans-serif;
+    font-size: 35px;
+    position: absolute;
+    left: 60px;
+    top: 150px;
+    color: white;
+    padding-left: 2px;
+}
+
+.texto-menu1{
+    font-family: "Varela Round", sans-serif;
+    font-size: 35px;
+    position: absolute;
+    left: 60px;
+    top: 230px;
+    color: white;
+}
+
+.localizacao{
+    position: absolute;
+    top: 235px;
+    left: 20px;
+    transform: scale(1.5);
+}
+
+.localizacao:hover{
+    transition: 1s;
+    transform: scale(1.6);
+}
+
+.casinha{
+    position: absolute;
+    top: 150px;
+    left: 20px;
+}
+
+.mapa{
+    position: absolute;
+    top: 500px;
+    left: 100px;
+}
+
+.lupa{
+    position: absolute;
+    left: 1000px;
+    top: 300px;
+    transform: rotate(90deg);
+}
+
+.enfermeira{
+    position:absolute;
+    left: 200px;
+    top: 270px;
+}
+
+.PC{
+    position: absolute;
+    left: 1150px;
+    top: 225px
+}
+
+a{
+    text-decoration: none;
+}
+
+.click-mapa{
+    color: white;
+    background: var(--menu-rgb);
+    width: 11.75%;
+    font-size: 50px;
+    margin-left: 220px;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.click-mapa:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    background: var(--botao-transicao);
+}
+
+.texto-menu:hover, .casinha:hover, .texto-menu1:hover{
+    transition: 1s;
+    transform: scale(1.1);
+
+}
+
+.sidebar-menu.active {
+    left: 0;
+}

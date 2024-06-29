@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedGuia - Mapa</title>
+    <link rel="stylesheet" href="stylemapa.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster/dist/MarkerCluster.Default.css">
+</head>
+<body>
+    <header>
+        <div id="h-titulo">
+            <h1>MedGuia</h1>
+        </div>
+    </header>
+
+    <section>    
+        <div class="container">
+            <input type="checkbox" id="checkbox-menu" class="checkbox">
+            <label for="checkbox-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </section>
+
+    <nav class="sidebar-menu">
+        <a href="index.html"><img src="inicio.png" alt="inicio" width="35" class="casinha"></a>
+        <a href="index.html" class="texto-menu">INÍCIO</a>
+        <a href="mapa.html"><img src="localizacao.png" alt="inicio" width="35" class="localizacao"></a>
+        <a href="mapa.html" class="texto-menu1">MAPA</a>
+    </nav>
+
+    <div class="busca">
+        <h2>RECEBER DADOS SOBRE A DOENÇA</h2>
+        <p class="endereco">Digite um endereço</p>
+        <input type="text" id="address-input" placeholder="Digite um endereço...">
+        <p class="endereco">Selecione a Doença</p>
+        <select id="marker-text-select">
+            <option value="Gripe">Gripe</option>
+            <option value="Dengue">Dengue</option>
+            <option value="Febre Amarela">Febre Amarela</option>
+            <option value="Cólera">Cólera</option>
+        </select>
+    </div>
+
+    <button type="submit" onclick="searchAddress()" class="search-button"> <img src="aviao.png" width="100"></button>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="map.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
