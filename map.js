@@ -74,7 +74,7 @@ function initMap() {
                                 randomNumbers[markerKey] = Math.floor(Math.random() * 1000);
                             } 
 
-                            var markerLabel = markerKey + " " + randomNumbers[markerKey];
+                            var markerLabel = markerKey + " " + randomNumbers[markerKey] + " pessoas";
 
                             // Cria uma bolinha vermelha com a nova localização
                             var newMarker = L.circleMarker([lat, lon], {
