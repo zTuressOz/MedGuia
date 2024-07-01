@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner pai */
+    height: auto; /* Mantém a proporção da imagem ao redimensionar */
+}
+
 :root {
     --titulo-rgb: linear-gradient(to left, rgb(1, 104, 117), rgb(7, 97, 201), rgb(1, 104, 117));
     --botao-transicao: linear-gradient(to left, rgb(2, 152, 172), rgb(3, 113, 238), rgb(2, 152, 172));
@@ -55,10 +60,16 @@ h1 {
     left: 75px;
 }
 
+.titulo-terciario {
+    display: flex;
+    justify-content:last baseline;
+}
+
+
 h2{
     font-family: "Rubik", sans-serif;
     text-align: center;
-    margin-top: 75px;
+    margin-top: 10vh;
     font-size: 45px;
     color: rgb(255, 255, 255);
 }
@@ -66,22 +77,31 @@ h2{
 h3{
     font-family: "Rubik", sans-serif;
     margin-top: 75px;
-    margin-left: 90px;
+    margin-left: 4vw;
     font-size: 35px;
     color: var(--azul);
 }
 
+
 .texto-mapa{
-    margin-left: 100px;
+    display: flex;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-left: 10vw;
     margin-top: 50px;
 }
 
 .topicos{
+    display: flex;
+    text-align: center;
     font-family: "Rubik", sans-serif;
     color: rgb(255, 255, 255);
-    margin-top: 50px;
-    margin-left: 150px;
+    margin-top: 5vh;
+    margin-left: 6vw;
     font-size: 25px;
+    width: 30%;
 }
 
 .container {
@@ -201,8 +221,8 @@ label span:nth-child(3) {
 
 .lupa{
     position: absolute;
-    left: 1000px;
-    top: 300px;
+    left: 55vw;
+    top: 43vh;
     transform: rotate(90deg);
 }
 
@@ -214,8 +234,8 @@ label span:nth-child(3) {
 
 .PC{
     position: absolute;
-    left: 1150px;
-    top: 225px
+    left: 60vw;
+    top: 30vh;
 }
 
 a{
@@ -223,12 +243,13 @@ a{
 }
 
 .click-mapa{
+    position: absolute;
     color: white;
     background: var(--menu-rgb);
-    width: 11.75%;
+    width: 11.75vw;
     font-size: 50px;
-    margin-left: 220px;
-    margin-top: 50px;
+    left: 250px;
+    margin-top: 12vw;
     padding: 30px;
     border-radius: 20px;
 }
@@ -247,4 +268,88 @@ a{
 
 .sidebar-menu.active {
     left: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+    body{
+        width: 50%;
+    }
+
+    header{
+        width: 200%;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2{
+        margin-left: 90px;
+        font-size: 30px;
+        size: 5%;
+        height: 5%;
+        width: 120%;
+    }
+
+    h3{
+        display: flex;
+        text-align: center;
+        font-size: 15px;
+        margin-left: 50px;
+        margin-top: 50px;
+        width: 45%;
+        height: 5%;
+        size: 20%;
+    }
+
+
+    .texto-mapa{
+        font-size: 15px;
+        margin-top: 5px;
+        margin-right: 120vw;
+    }
+
+    .topicos{
+        display: flex;
+        text-align: center;
+        margin-left: 40px;
+        margin-top: 20px;
+        font-size: 15px;
+        width: 60%;
+    }
+
+    .texto-menu {
+        font-size: 25px;
+    }
+
+    .PC{
+        width: 50%;
+        left: 210px;
+        top: 350px;
+    }
+
+    .lupa{
+        width: 20%;
+        left: 210px;
+        top: 370px;
+    }
+
+    .sidebar-menu {
+        left: -60vw; 
+        width: 50vw;
+    }
+
+    .click-mapa{
+        font-size: 25px;
+        width: 30%;
+        top: 650px;
+        left: 5vw;
+    }
+
+    .texto-menu1{       
+         font-size: 25px;
+
+    }
+    
 }

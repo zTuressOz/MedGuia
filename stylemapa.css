@@ -21,7 +21,7 @@
 
 h1 {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 95px;
+    font-size: 90px;
     color: var(--branco);
 }
 
@@ -32,6 +32,11 @@ h2{
     margin-right: 120px;
     font-size: 25px;
     color: rgb(255, 255, 255);
+}
+
+.logo{
+    position: absolute;
+    left: 75px;
 }
 
 body {
@@ -54,7 +59,7 @@ header {
 #h-titulo {
     display: flex;
     flex: 1;
-    margin-left: 200px;
+    margin-left: 220px;
 }
 
 
@@ -189,6 +194,13 @@ a{
     transform: scale(1.2);
 }
 
+.busca1{
+    position: absolute;
+    left: 1450px;
+    top: 450px;
+    transform: scale(1.2);
+}
+
 .texto-menu{
     font-family: "Varela Round", sans-serif;
     font-size: 35px;
@@ -202,7 +214,15 @@ a{
     font-family: "Varela Round", sans-serif;
     color: white;
     font-size: 20px;
-    padding-left: 50px;
+    padding-left: 65px;
+}
+
+
+.endereco1{
+    font-family: "Varela Round", sans-serif;
+    color: white;
+    font-size: 20px;
+    padding-left: 65px;
 }
 
 .search-button {
@@ -210,15 +230,35 @@ a{
     border: none;
     background: none;
     padding: 0;
-    margin-left: 1760px;
-    margin-top: 150px;
+    margin-left: 1780px;
+    margin-top: 190px;
 }
+
+.search-button1{
+    position: absolute;
+    border: none;
+    background: none;
+    padding: 0;
+    margin-left: 1780px;
+    margin-top: 475px;
+}
+
 
 .search-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px; 
+}
+
+#address-input1 {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px; 
+    margin-right: 10px; 
+    margin-top: 10px;
 }
 
 #address-input {
@@ -229,6 +269,7 @@ a{
     width: 300px; 
     margin-right: 10px; 
 }
+
 
 #random-address-input
 {
@@ -251,20 +292,10 @@ a{
 
 }
 
-
-#random-marker-text-select{
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 300px; 
-    margin-right: 10px; 
-    margin-top: 10px;
-
-}
-
-.search-button:hover {
-    background: #0056b3; 
+.search-button:hover, .search-button1:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 
@@ -272,4 +303,11 @@ a{
     outline: none; 
     border-color: #007bff; 
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); 
+}
+
+
+@media screen and (max-width: 768px) {
+    body{
+        width: 100%;
+    }
 }
