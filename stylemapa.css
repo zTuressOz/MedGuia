@@ -254,14 +254,6 @@ a {
     padding: 0 20px;
 }
 
-.busca,
-.busca1 {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: calc(50% - 20px);
-}
-
 .busca h2,
 .busca1 h2 {
     font-size: 1.5rem;
