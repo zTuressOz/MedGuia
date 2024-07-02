@@ -89,6 +89,15 @@ header {
     padding: 0 20px; /* Ajuste o espaçamento conforme necessário */
 }
 
+.container {
+    position: fixed;
+    top: 30px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    z-index: 2000;
+}
+
 #checkbox-menu {
     position: absolute;
     opacity: 0;
