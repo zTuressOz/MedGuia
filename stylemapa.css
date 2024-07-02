@@ -55,7 +55,7 @@ header {
     height: 110px;
     position: fixed;
     top: 0;
-    background-color: green;
+    background: var(--titulo-rgb);
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
