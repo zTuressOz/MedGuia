@@ -237,7 +237,7 @@ a {
 
 #map-container {
     position: relative;
-    width: 100%;
+    width: 90%;
     height: 600px; /* Defina a altura desejada para o mapa */
     margin-top: 20px;
 }
