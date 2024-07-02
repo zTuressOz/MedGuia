@@ -73,6 +73,7 @@ h4 {
 }
 
 header {
+    align-text: center;
     display: flex;
     margin-top: 5px;
     align-items: center;
