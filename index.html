@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,51 +10,56 @@
 
 <body>
     <header>
-        <div id="h-titulo">
-            <h1>MedGuia</h1>
+        <div class="container-logo">
+            <div class="logo"><img src="medguia.png" width="350"></div>
+            <div class="titulo-primario">
+                <h1>MedGuia</h1>
+            </div>
         </div>
-
-        <img src = "medguia.png" width = "150" class = "logo">
     </header>
 
-    <section>    
-        <div class="container">
-            <input type="checkbox" id="checkbox-menu" class="checkbox">
-            <label for="checkbox-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-        </div>
-    </section>
+    <div class="container">
+        <input type="checkbox" id="checkbox-menu" class="checkbox">
+        <label for="checkbox-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
 
     <section class="corpo">
-        <div class="Titulo-secundario">
-            <h2>MEDGUIA CUIDA DA SUA SAÚDE!</h2>
-        </div>
-
-        <div class="titulo-terciario"> 
-   <h3>Com nossa plataforma você pode obter:</h3>
-        </div>
-
-        <div class = "topicos">
-            <h4>•Informações mapeadas, rápidas e precisas sobre  surtos e doenças emergentes nas proximidades <br> •Hospitais, Clínicas, Postos de Saúde na cidade <br> Clique aqui para ver nosso mapa:</h4>
-            <a href="mapa.html"><h4 class="click-mapa">MAPA</h4></a>
-
-
+        <div class="container-fundo-imagem">
+            <div class="container-titulo-secundario">
+                <h2>MEDGUIA CUIDA DA SUA SAÚDE!</h2>
+            </div>
         </div>
 
 
-        <img src="PC.png" alt="Computador" class="PC">
-        <img src="lupa.png" alt="Lupa" class="lupa" width = "300">
+        <div class="container-formas">
+            <div class="quadrados">
+                <div class="quadrado" data-retangulo="retangulo1"><img src="PC.png" class="imgtoque" width="250"><img src="toque.png" width="170" class="toque"></div>
+                <div class="quadrado" data-retangulo="retangulo2"><img src="consulta.png" class="imgtoque" width="250"><img src="toque.png" width="170" class="toque"></div>
+                <div class="quadrado" data-retangulo="retangulo3"><img src="informacoes.png" class="imgtoque" width="250"><img src="toque.png" width="170" class="toque"></div>
+            </div>
+
+            <div class="retangulos">
+                <div class="retangulo" id="retangulo1"><p class="texto-retangulo">Com nosso webmapa você consegue ver locais onde há surtos de doenças e edifícios de saúde mais próximos em sua cidade!<a href="mapa.html">   <br>Mapa</a></p></div>
+                <div class="retangulo" id="retangulo2"></div>
+                <div class="retangulo" id="retangulo3"></div>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a href="index.html"><img src="inicio.png" alt="inicio" width="35" class="casinha"></a>
+            <a href="index.html" class="texto-menu">INÍCIO</a>
+            <a href="mapa.html"><img src="localizacao.png" alt="inicio" width="35" class="localizacao"></a>
+            <a href="mapa.html" class="texto-menu1">MAPA</a>
+        </nav>
     </section>
 
-    <nav class="sidebar-menu">
-        <a href="index.html"><img src ="inicio.png" alt = "inicio" width="35" class="casinha"></a>
-        <a href = "index.html" class = "texto-menu">INÍCIO</a>
-        <a href="mapa.html"><img src ="localizacao.png" alt = "inicio" width="35" class="localizacao"></a>
-        <a href = "mapa.html" class = "texto-menu1">MAPA</a>
-    </nav>
+    <footer>
+        Equipe MedGuia João XXIII
+    </footer>
 
     <script src="main.js"></script>
 </body>

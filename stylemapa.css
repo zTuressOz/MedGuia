@@ -20,6 +20,7 @@
 }
 
 h1 {
+    padding-top: 0px;
     font-family: "Bebas Neue", sans-serif;
     font-size: 90px;
     color: var(--branco);
@@ -289,6 +290,17 @@ a{
         border-radius: 4px;
         width: 300px; 
         margin-right: 10px; 
+
+}
+
+#marker-text-select1{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px; 
+    margin-right: 10px; 
+    margin-top: 1vh;
 
 }
 

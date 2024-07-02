@@ -1,8 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merienda:wght@300..900&family=Playwrite+ES+Deco:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +9,15 @@
 }
 
 img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner pai */
-    height: auto; /* Mantém a proporção da imagem ao redimensionar */
+    max-width: 100%;
+    height: auto;
 }
 
 :root {
-    --titulo-rgb: linear-gradient(to left, rgb(1, 104, 117), rgb(7, 97, 201), rgb(1, 104, 117));
+    --titulo-rgb: linear-gradient(to left, rgba(255, 255, 255, 0.301), #4ba18a3d, rgba(255, 255, 255, 0.315));
+    --corpo-rgb: linear-gradient(to bottom, #03ac7fbd,  white, white);
     --botao-transicao: linear-gradient(to left, rgb(2, 152, 172), rgb(3, 113, 238), rgb(2, 152, 172));
-    --menu-rgb:linear-gradient(to bottom, rgb(1, 104, 117), rgb(7, 97, 201), rgb(1, 104, 117));
+    --menu-rgb: linear-gradient(to bottom, rgb(1, 104, 117), rgb(7, 97, 201), rgb(1, 104, 117));
     --branco: white;
     --borda-cabecalho: #00ACC1;
     --verde-escuro: rgb(1, 66, 36);
@@ -25,92 +25,125 @@ img {
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 100vh;
-    background: linear-gradient(to right, #212121 50%, #1565C0 50%);
+    background-color: white;
+}
+
+.container-fundo-imagem {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 7.25%; /* Altura proporcional para manter a imagem responsiva */
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+    border-bottom: 3px solid #4DB6AC ;
+}
+
+.container-fundo-imagem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('h0spital.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    z-index: -2;
+}
+
+
+.container-fundo-imagem::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+.container-logo {
+    display: flex;
+    margin-top: 15px;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
 }
 
 header {
-    width: 100%;
-    height: 100px;
-    background: var(--titulo-rgb);
     display: flex;
+    margin-top: 5px;
+    justify-content: center;
     align-items: center;
-    position: relative;
-    border-bottom: 10px solid var(--borda-cabecalho);
+    width: 100%;
+    height: 110px;
+    position: fixed;
+    top: 0;
+    background: var(--titulo-rgb);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: 0.75s ease;
 }
 
-#h-titulo {
-    display: flex;
-    flex: 1;
-    margin-left: 200px;
+footer{
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5px;
+    width: 100%;
+    background: #03ac7fbd;
+    color: white;
 }
+
 
 h1 {
     font-family: "Bebas Neue", sans-serif;
     font-size: 90px;
-    margin-left: 20px ;
-    color: var(--branco);
+    color: #86e5bd;
 }
 
-.logo{
-    position: absolute;
-    left: 75px;
-}
-
-.titulo-terciario {
-    display: flex;
-    justify-content:last baseline;
-}
-
-
-h2{
-    font-family: "Rubik", sans-serif;
+.container-titulo-secundario {
     text-align: center;
-    margin-top: 10vh;
-    font-size: 45px;
-    color: rgb(255, 255, 255);
+    margin-top: 60px;
 }
 
-h3{
-    font-family: "Rubik", sans-serif;
-    margin-top: 75px;
-    margin-left: 4vw;
-    font-size: 35px;
-    color: var(--azul);
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff9f;
+    margin-top: 120px;
+    text-shadow: 0 10px 30px rgb(255, 247, 247, 0.2), 0 10px 10px rgb(255, 255, 255, 0.2);
 }
 
-
-.texto-mapa{
-    display: flex;
+h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    color: rgb(1, 96, 173);
     text-align: center;
-    font-family: "Rubik", sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 25px;
-    margin-left: 10vw;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
-.topicos{
-    display: flex;
-    text-align: center;
-    font-family: "Rubik", sans-serif;
-    color: rgb(255, 255, 255);
-    margin-top: 5vh;
-    margin-left: 6vw;
-    font-size: 25px;
-    width: 30%;
+h4 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
 }
 
 .container {
-    position: fixed; 
-    top: 20px; 
-    left: 15px; 
+    position: fixed;
+    top: 30px;
+    left: 15px;
     display: flex;
     align-items: center;
-    z-index: 2000; 
+    z-index: 2000;
 }
 
 #checkbox-menu {
@@ -124,16 +157,17 @@ label {
     display: block;
     height: 22px;
     width: 60px;
-    z-index: 2001; 
+    z-index: 2001;
 }
 
 label span {
     position: absolute;
+    margin-top: 10px;
     display: block;
     height: 10px;
     width: 100%;
     border-radius: 30px;
-    background: white;
+    background: #86e5bd;
     transition: 0.25s ease-in-out;
 }
 
@@ -152,6 +186,7 @@ label span:nth-child(3) {
 #checkbox-menu:checked + label span:nth-child(1) {
     transform: rotate(-45deg);
     top: 15px;
+    background-color: white;
 }
 
 #checkbox-menu:checked + label span:nth-child(2) {
@@ -161,22 +196,23 @@ label span:nth-child(3) {
 #checkbox-menu:checked + label span:nth-child(3) {
     transform: rotate(45deg);
     top: 15px;
+    background-color: white;
 }
 
 .sidebar-menu {
     display: flex;
     flex-direction: column;
-    background: var(--menu-rgb);
+    background-color:#4DB6AC;
     width: 15vw;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     top: 0;
-    left: -40vw; 
-    transition: 0.4s;
-    z-index: 1000; 
+    left: -60vw;
+    transition: 0.5s;
+    z-index: 1000;
 }
 
-.texto-menu{
+.texto-menu {
     font-family: "Varela Round", sans-serif;
     font-size: 35px;
     position: absolute;
@@ -186,7 +222,7 @@ label span:nth-child(3) {
     padding-left: 2px;
 }
 
-.texto-menu1{
+.texto-menu1 {
     font-family: "Varela Round", sans-serif;
     font-size: 35px;
     position: absolute;
@@ -195,161 +231,192 @@ label span:nth-child(3) {
     color: white;
 }
 
-.localizacao{
+.localizacao {
     position: absolute;
     top: 235px;
     left: 20px;
     transform: scale(1.5);
 }
 
-.localizacao:hover{
+.localizacao:hover {
     transition: 1s;
     transform: scale(1.6);
 }
 
-.casinha{
+.casinha {
     position: absolute;
     top: 150px;
     left: 20px;
 }
 
-.mapa{
-    position: absolute;
-    top: 500px;
-    left: 100px;
-}
-
-.lupa{
-    position: absolute;
-    left: 55vw;
-    top: 43vh;
-    transform: rotate(90deg);
-}
-
-.enfermeira{
-    position:absolute;
-    left: 200px;
-    top: 270px;
-}
-
-.PC{
-    position: absolute;
-    left: 60vw;
-    top: 30vh;
-}
-
-a{
+a {
     text-decoration: none;
 }
 
-.click-mapa{
-    position: absolute;
+.click-mapa {
     color: white;
     background: var(--menu-rgb);
     width: 11.75vw;
     font-size: 50px;
-    left: 250px;
-    margin-top: 12vw;
+    margin-top: auto;
     padding: 30px;
     border-radius: 20px;
 }
 
-.click-mapa:hover{
+.click-mapa:hover {
     transform: scale(1.1);
     transition: 1s;
     background: var(--botao-transicao);
 }
 
-.texto-menu:hover, .casinha:hover, .texto-menu1:hover{
+.texto-menu:hover,
+.casinha:hover,
+.texto-menu1:hover {
     transition: 1s;
     transform: scale(1.1);
-
 }
 
 .sidebar-menu.active {
     left: 0;
 }
 
+.container-formas {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens ao topo */
+    margin-top: 20px; /* Espaçamento do topo */
+    margin-bottom: 50px;
+    padding-left: 20px; /* Espaçamento à esquerda para afastar da borda */
+    padding-right: 20px; /* Espaçamento à direita para afastar da borda */
+}
+
+.imgtoque{
+    position: absolute;
+    z-index: -1;
+}
+
+.toque{
+    margin-left: 130px;
+    margin-top: 220px;
+    display: none;
+}
+
+.quadrados {
+    display: flex;
+    flex-direction: column; /* Organiza os quadrados em coluna */
+    gap: 20px; /* Espaçamento entre os quadrados */
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.retangulos {
+    display: flex;
+    flex-direction: column; /* Organiza os retângulos em coluna */
+    margin-top: 30px;
+    width: 90%; /* Largura do retângulo */
+    gap: 20px;
+}
+
+.quadrado {
+    height: 400px;
+    width: 300px;
+    border-radius: 150px;
+    border: 5px solid #4DB6AC;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.texto-retangulo{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 70px;
+    color: #4DB6AC;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.247), 0 10px 30px rgba(0, 0, 0, 0.247);
+}
+
+.retangulo {
+    text-align: center;
+    font-size: 30px;
+    height: 400px; /* Altura do retângulo */
+    border-radius: 150px;
+    border: 5px solid #4DB6AC;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    transition: top 0.3s ease, left 0.3s ease; /* Transição suave para top e left */
+    display: flex; /* Adiciona flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+
 @media screen and (max-width: 768px) {
-
-    body{
-        width: 50%;
-    }
-
-    header{
-        width: 200%;
-    }
-
     h1 {
-        font-size: 60px;
+        font-size: 50px;
     }
 
-    h2{
-        margin-left: 90px;
-        font-size: 30px;
-        size: 5%;
-        height: 5%;
-        width: 120%;
+    label span {
+        width: 80%;
     }
 
-    h3{
+    .logo {
+        width: 110px;
+        height: 110px;
+        margin-left: 35px;
+    }
+
+    .container-logo {
+        width: 100%;
         display: flex;
-        text-align: center;
-        font-size: 15px;
-        margin-left: 50px;
-        margin-top: 50px;
-        width: 45%;
-        height: 5%;
-        size: 20%;
+        justify-content: center;
+        align-items: center;
     }
 
-
-    .texto-mapa{
-        font-size: 15px;
-        margin-top: 5px;
-        margin-right: 120vw;
+    body {
+        flex-direction: column;
     }
 
-    .topicos{
+    .sidebar-menu.active {
+        width: 55%;
+    }
+
+    .texto-retangulo{
+        margin-top: 80px;
+        font-size: 34px;
+    }
+
+    .retangulo.ativo {
+        display: block; /* Mostra o retângulo quando ativo */
+        }
+    
+        .container-formas {
         display: flex;
-        text-align: center;
-        margin-left: 40px;
-        margin-top: 20px;
-        font-size: 15px;
-        width: 60%;
-    }
-
-    .texto-menu {
-        font-size: 25px;
-    }
-
-    .PC{
-        width: 50%;
-        left: 210px;
-        top: 350px;
-    }
-
-    .lupa{
-        width: 20%;
-        left: 210px;
-        top: 370px;
-    }
-
-    .sidebar-menu {
-        left: -60vw; 
-        width: 50vw;
-    }
-
-    .click-mapa{
-        font-size: 25px;
-        width: 30%;
-        top: 650px;
-        left: 5vw;
-    }
-
-    .texto-menu1{       
-         font-size: 25px;
-
+        flex-direction: column; /* Organiza os retângulos em coluna */
+        align-items: flex-start; /* Alinha os itens ao topo */
+    
     }
     
+        .toque{
+        display: block;
+    }
+    
+        .container-quadrados {
+                    align-items: center; /* Centraliza os itens na coluna em telas menores */
+                    padding-left: 0; /* Remove o padding à esquerda em telas menores */
+                }
+    
+        .quadrado {
+             margin-bottom: 20px; /* Adiciona espaçamento inferior entre os quadrados em telas menores */
+             margin-right: 0; /* Remove o espaçamento à direita em telas menores */
+         }
+    
+        .retangulo {
+            position: absolute; /* Posicionamento absoluto para alinhar com o quadrado */
+            height: 400px; /* Altura do retângulo */
+            width: 300px; /* Largura do retângulo */
+            border-radius: 150px; /* Raio do retângulo */
+            border: 5px solid #4DB6AC; /* Estilo da borda */
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5); /* Sombra do retângulo */
+            display: none; /* Inicialmente escondido */
+            transition: top 0.3s ease, left 0.3s ease; /* Transição suave para top e left */
+            display: flex; /* Adiciona flexbox */
+            align-items: center; /* Centraliza verticalmente */
+            justify-content: center; /* Centraliza horizontalmente */
+        }
 }
