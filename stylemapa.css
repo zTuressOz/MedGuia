@@ -75,7 +75,6 @@ h4 {
 header {
     display: flex;
     margin-top: 5px;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 110px;
@@ -237,12 +236,12 @@ a {
 
 #map-container {
     position: relative;
+    width: 100%;
     height: 600px; /* Defina a altura desejada para o mapa */
     margin-top: 20px;
 }
 
 #map {
-    justify-content: center;
     width: 100%;
     height: 100%;
 }
@@ -253,6 +252,14 @@ a {
     margin-top: 20px;
     width: 100%;
     padding: 0 20px;
+}
+
+.busca,
+.busca1 {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(50% - 20px);
 }
 
 .busca h2,
@@ -295,7 +302,6 @@ a {
     color: #fff;
     border: none;
     padding: 10px 20
-}
 
 .search-button:hover,
 .search-button1:hover {
@@ -431,6 +437,30 @@ a {
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); 
 }
 
+.side-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px; /* Largura desejada para o painel ao lado do mapa */
+    height: 100vh; /* Altura ajustada para ocupar toda a altura da tela */
+    background-color: #f0f0f0; /* Cor de fundo do painel */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1); /* Sombra à esquerda */
+    z-index: 1000; /* Z-index para garantir que fique sobre o mapa */
+    overflow-y: auto; /* Adicionar scroll vertical se necessário */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos verticalmente */
+    justify-content: flex-start; /* Inicia o conteúdo no topo */
+}
+
+.side-panel .busca {
+    margin-bottom: 20px; /* Espaçamento entre as seções de busca */
+}
+
+.side-panel .busca:last-child {
+    margin-bottom: 0; /* Remove margem inferior do último elemento */
+}
 
 @media screen and (max-width: 768px) {
     .side-panel {
@@ -441,8 +471,7 @@ a {
    }
 
 #map-container{
-  width:100%;
-  height: 400px;
+  width:80%;
   margin-left: 42px;
   height:400px;
   margin-top:150px;
