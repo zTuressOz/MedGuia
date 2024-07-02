@@ -62,7 +62,6 @@ h4 {
     font-size: 30px;
 }
 
-
 .container-logo {
     display: flex;
     margin-top: 15px;
@@ -76,7 +75,7 @@ h4 {
 header {
     display: flex;
     margin-top: 5px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 110px;
@@ -87,7 +86,8 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     transition: 0.75s ease;
-}
+    padding: 0 20px; /* Ajuste o espaçamento conforme necessário */
+}
 
 #checkbox-menu {
     position: absolute;
@@ -98,18 +98,17 @@ label {
     cursor: pointer;
     position: relative;
     display: block;
-    height: 22px;
+    height: 45px;
     width: 60px;
     z-index: 2001;
 }
 
 label span {
     position: absolute;
-    margin-top: 10px;
     display: block;
-    height: 10px;
+    height: 5px;
     width: 100%;
-    border-radius: 30px;
+    border-radius: 2px;
     background: #86e5bd;
     transition: 0.25s ease-in-out;
 }
@@ -145,7 +144,7 @@ label span:nth-child(3) {
 .sidebar-menu {
     display: flex;
     flex-direction: column;
-    background-color:#4DB6AC;
+    background-color: #4DB6AC;
     width: 15vw;
     height: 100%;
     position: fixed;
@@ -196,11 +195,10 @@ a {
     text-decoration: none;
 }
 
-
 .sidebar-menu {
     display: flex;
     flex-direction: column;
-    background-color:#4DB6AC;
+    background-color: #4DB6AC;
     width: 15vw;
     height: 100%;
     position: fixed;
@@ -210,13 +208,11 @@ a {
     z-index: 1000;
 }
 
-
-
 .leaflet-control-zoom {
     z-index: 500; /* Z-index menor para os controles de zoom */
 }
 
-.localizacao{
+.localizacao {
     position: absolute;
     top: 235px;
     left: 20px;
@@ -227,23 +223,23 @@ a {
     left: 0;
 }
 
-.casinha{
+.casinha {
     position: absolute;
     top: 150px;
     left: 20px;
 }
 
-.texto-menu:hover, .casinha:hover, .texto-menu1:hover{
+.texto-menu:hover, .casinha:hover, .texto-menu1:hover {
     transition: 1s;
     transform: scale(1.1);
 }
 
-.localizacao:hover{
+.localizacao:hover {
     transition: 1s;
     transform: scale(1.6);
 }
 
- #map-container {
+#map-container {
     position: relative;
     width: 100%;
     height: 600px; /* Defina a altura desejada para o mapa */
@@ -310,11 +306,7 @@ a {
     background-color: #333;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+    padding: 10px 20
 
 .search-button:hover,
 .search-button1:hover {
