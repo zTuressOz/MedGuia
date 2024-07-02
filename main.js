@@ -10,7 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const quadrados = document.querySelectorAll('.quadrado');
     const retangulos = document.querySelectorAll('.retangulo');
 
+
+
     if (isMobile) {
+
+            // Oculta todos os retângulos no carregamento da página
+    retangulos.forEach(retangulo => {
+        retangulo.style.display = 'none';
+    });
+    
+
         quadrados.forEach(quadrado => {
             quadrado.addEventListener('click', function() {
                 const retanguloId = this.getAttribute('data-retangulo');
@@ -45,9 +54,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const retangulos = document.querySelectorAll('.retangulo');
-    retangulos.forEach(retangulo => {
-        retangulo.style.display = 'none'; // Esconde todos os retângulos inicialmente
-    });
-});
+
+
