@@ -469,5 +469,10 @@ label span:nth-child(3) {
         width: 100%;
         height: auto;
         box-shadow: none;
-    }
+   }
+
+#map-container{
+  width:80%;
+}
+
 }
