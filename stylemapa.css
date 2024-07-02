@@ -495,7 +495,7 @@ a {
         flex-direction: column;
     }
 
-    .sidebar-menu{
+    .sidebar-menu.active{
         width: 55%;
     }
 
