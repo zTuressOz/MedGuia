@@ -237,15 +237,13 @@ a {
 
 #map-container {
     position: relative;
-    width: 90%;
     height: 600px; /* Defina a altura desejada para o mapa */
     margin-top: 20px;
 }
 
 #map {
-    width: 100%;
+    width: 90%;
     height: 100%;
-    margin-left: 150px;
 }
 
 .container-buscas {
