@@ -431,30 +431,6 @@ a {
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); 
 }
 
-.side-panel {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 300px; /* Largura desejada para o painel ao lado do mapa */
-    height: 100vh; /* Altura ajustada para ocupar toda a altura da tela */
-    background-color: #f0f0f0; /* Cor de fundo do painel */
-    padding: 20px; /* Espaçamento interno */
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1); /* Sombra à esquerda */
-    z-index: 1000; /* Z-index para garantir que fique sobre o mapa */
-    overflow-y: auto; /* Adicionar scroll vertical se necessário */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza os elementos verticalmente */
-    justify-content: flex-start; /* Inicia o conteúdo no topo */
-}
-
-.side-panel .busca {
-    margin-bottom: 20px; /* Espaçamento entre as seções de busca */
-}
-
-.side-panel .busca:last-child {
-    margin-bottom: 0; /* Remove margem inferior do último elemento */
-}
 
 @media screen and (max-width: 768px) {
     .side-panel {
