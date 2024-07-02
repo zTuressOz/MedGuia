@@ -473,6 +473,7 @@ label span:nth-child(3) {
 
 #map-container{
   width:80%;
+  margin-left: 20px;
 }
 
 }
