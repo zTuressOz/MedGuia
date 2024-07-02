@@ -20,7 +20,11 @@
         </div>
     </header>
 
-    <section>    
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+
+    <section class="corpo">
         <div class="container">
             <input type="checkbox" id="checkbox-menu" class="checkbox">
             <label for="checkbox-menu">
@@ -29,48 +33,48 @@
                 <span></span>
             </label>
         </div>
+
+        <nav class="sidebar-menu">
+            <a href="index.html"><img src="inicio.png" alt="inicio" width="35" class="casinha"></a>
+            <a href="index.html" class="texto-menu">INÍCIO</a>
+            <a href="mapa.html"><img src="localizacao.png" alt="inicio" width="35" class="localizacao"></a>
+            <a href="mapa.html" class="texto-menu1">MAPA</a>
+        </nav>
+
+        <div class="side-panel">
+            <div class="container-buscas">
+                <div class="busca">
+                    <h2>RECEBER DADOS SOBRE A DOENÇA</h2>
+                    <p class="endereco">Digite um endereço</p>
+                    <input type="text" id="address-input" placeholder="Digite um endereço...">
+                    <p class="endereco">Selecione a Doença</p>
+                    <select id="marker-text-select">
+                        <option value="Gripe">Gripe</option>
+                        <option value="Dengue">Dengue</option>
+                        <option value="Febre Amarela">Febre Amarela</option>
+                        <option value="Cólera">Cólera</option>
+                    </select>
+                    <button type="submit" onclick="searchDiseaseData()" class="search-button"> <img src="lupinha.png" width="100"></button>
+                </div>
+
+                <div class="busca">
+                    <h2>PROCURE UPAS, HOSPITAIS E POSTOS DE SAUDE PRÓXIMOS EM SUA CIDADE</h2>
+                    <p class="endereco">Digite um endereço</p>
+                    <input type="text" id="address-input1" placeholder="Digite um endereço...">
+                    <p class="endereco">Selecione o Edifício</p>
+                    <select id="marker-text-select1">
+                        <option value="Clinicas">Clinicas</option>
+                        <option value="Hospitais">Hospitais</option>
+                        <option value="Dentistas">Dentistas</option>
+                        <option value="Farmacias">Farmácias</option>
+                        <option value="Veterinarias">Veterinárias</option>
+                        <option value="Assistencia_Social">Assistência Social</option>
+                    </select>
+                    <button type="submit" onclick="searchHealthFacilities()" class="search-button"> <img src="lupinha.png" width="100"></button>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <nav class="sidebar-menu">
-        <a href="index.html"><img src="inicio.png" alt="inicio" width="35" class="casinha"></a>
-        <a href="index.html" class="texto-menu">INÍCIO</a>
-        <a href="mapa.html"><img src="localizacao.png" alt="inicio" width="35" class="localizacao"></a>
-        <a href="mapa.html" class="texto-menu1">MAPA</a>
-    </nav>
-
-    <div class="busca">
-        <h2>RECEBER DADOS SOBRE A DOENÇA</h2>
-        <p class="endereco">Digite um endereço</p>
-        <input type="text" id="address-input" placeholder="Digite um endereço...">
-        <p class="endereco">Selecione a Doença</p>
-        <select id="marker-text-select">
-            <option value="Gripe">Gripe</option>
-            <option value="Dengue">Dengue</option>
-            <option value="Febre Amarela">Febre Amarela</option>
-            <option value="Cólera">Cólera</option>
-        </select>
-    </div>
-
-
-    <div class="busca1">
-        <h2>PROCURE UPAS, HOSPITAIS E POSTOS DE SAUDE PRÓXIMOS EM SUA CIDADE</h2>
-        <p class="endereco1">Digite um endereço</p>
-        <input type="text" id="address-input1" placeholder="Digite um endereço...">
-        <p class="endereco">Selecione o Edifício</p>
-        <select id="marker-text-select1">
-            <option value="Clinicas">Clinicas</option>
-            <option value="Hospitais">Hospitais</option>
-            <option value="Dentistas">Dentistas</option>
-            <option value="Farmacias">Farmácias</option>
-            <option value="Veterinarias">Veterinárias</option>
-            <option value="Assistencia_Social">Assistência Social</option>
-        </select>
-    </div>
-
-    <button type="submit" onclick="searchDiseaseData()" class="search-button"> <img src="lupinha.png" width="100"></button>
-    <button type="submit" onclick="searchHealthFacilities()" class="search-button1"> <img src="lupinha.png" width="100"></button>
-
-    <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="map.js"></script>
