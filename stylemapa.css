@@ -477,6 +477,10 @@ a {
         box-shadow: none;
    }
 
+    .texto-menu3{
+        font-size:25px;
+    }
+
    .texto-agende{
     position: fixed;
     text-align: center;
@@ -488,7 +492,7 @@ a {
 
 
    .sidebar-menu.active {
-    width: 65%;
+    width: 70%;
 }
 
    .consulta-menu.active{
