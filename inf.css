@@ -12,6 +12,8 @@ img {
     max-width: 100%;
     height: auto;
 }
+.texto-doenca{ font-family: "Bebas Neue", sans-serif; font-size:40px; bottom: 0; color: #86e5bd; }
+
 
 :root {
     --titulo-rgb: linear-gradient(to left, rgba(255, 255, 255, 0.301), #4ba18a3d, rgba(255, 255, 255, 0.315));
@@ -244,26 +246,13 @@ Aqui está o código CSS atualizado:
 ```css
 /* ... (restante do CSS permanece inalterado) ... */
 
-.quadrado {
-    position: relative; /* Adicione esta linha */
+.quadrado{
     margin-top: 100px;
     height: 400px;
     width: 300px;
     border-radius: 150px;
     border: 5px solid #4DB6AC;
 }
-
-.texto-doenca {
-    position: absolute; /* Adicione esta linha */
-    bottom: 10px; /* Ajuste conforme necessário */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajusta o centramento */
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 40px;
-    color: #86e5bd;
-}
-
-
     
 .imgtoque{
         position: absolute;
