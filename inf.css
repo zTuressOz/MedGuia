@@ -35,13 +35,6 @@ footer{
     color: white;
 }
 
-.texto-doenca{
-    font-family: "Bebas Neue", sans-serif;
-    font-size:40px;
-    bottom: 0;
-    color: #86e5bd;
-}
-
 body {
     background-color: white;
     align-items: center;
@@ -241,14 +234,36 @@ label span:nth-child(3) {
     gap: 20px;
 }
 
+Para centralizar o texto horizontalmente e posicioná-lo verticalmente na parte inferior do quadrado, você pode ajustar o estilo CSS da classe `.texto-doenca` e `.quadrado`. Abaixo está a alteração necessária:
+
+1. Altere a propriedade `position` da classe `.quadrado` para `relative` para criar um contexto de posicionamento para seus elementos filhos.
+2. Defina a propriedade `position` da classe `.texto-doenca` para `absolute` e ajuste as propriedades `bottom` e `left` para centralizar o texto horizontalmente e posicioná-lo na parte inferior.
+
+Aqui está o código CSS atualizado:
+
+```css
+/* ... (restante do CSS permanece inalterado) ... */
+
 .quadrado {
+    position: relative; /* Adicione esta linha */
     margin-top: 100px;
     height: 400px;
     width: 300px;
     border-radius: 150px;
     border: 5px solid #4DB6AC;
 }
-    
+
+.texto-doenca {
+    position: absolute; /* Adicione esta linha */
+    bottom: 10px; /* Ajuste conforme necessário */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta o centramento */
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    color: #86e5bd;
+}
+
+
     
 .imgtoque{
         position: absolute;
