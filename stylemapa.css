@@ -492,7 +492,7 @@ a {
 
 
    .sidebar-menu.active {
-    width: 70%;
+    width: 65%;
 }
 
    .consulta-menu.active{
@@ -532,10 +532,6 @@ a {
 
     body {
         flex-direction: column;
-    }
-
-    .sidebar-menu.active{
-        width: 55%;
     }
 
 }
