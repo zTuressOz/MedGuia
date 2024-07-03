@@ -7,14 +7,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 img {
     max-width: 100%;
     height: auto;
 }
-.texto-doenca{ font-family: "Bebas Neue", sans-serif; font-size:40px; bottom: 0; color: #86e5bd; }
-
-
 :root {
     --titulo-rgb: linear-gradient(to left, rgba(255, 255, 255, 0.301), #4ba18a3d, rgba(255, 255, 255, 0.315));
     --corpo-rgb: linear-gradient(to bottom, #03ac7fbd,  white, white);
@@ -25,7 +21,6 @@ img {
     --verde-escuro: rgb(1, 66, 36);
     --azul: rgb(7, 97, 201);
 }
-
 footer{
     font-family: "Poppins", sans-serif;
     align-items: center;
@@ -36,15 +31,30 @@ footer{
     background: #03ac7fbd;
     color: white;
 }
+.texto-doenca{
+    font-family: "Bebas Neue", sans-serif;
+    font-size:40px;
+    left:50px;
+    color: #86e5bd;
+}
 
+
+    
+          
+            
+    
+
+          
+          Expand Down
+    
+    
+  
 body {
     background-color: white;
     align-items: center;
     display: flex;
     flex-direction: column;
 }
-
-
 header {
     display: flex;
     justify-content: center;
@@ -60,23 +70,19 @@ header {
     transition: 0.75s ease;
     padding: 0 20px; /* Ajuste o espaçamento conforme necessário */
 }
-
 .container-logo {
     display: flex;
     align-items: center;
 }
-
 .logo {
     width: 130px;
     height: 130px;
 }
-
 h1 {
     font-family: "Bebas Neue", sans-serif;
     font-size: 90px;
     color: #86e5bd;
 }
-
 .sidebar-menu {
     display: flex;
     flex-direction: column;
@@ -89,11 +95,9 @@ h1 {
     transition: 0.5s;
     z-index: 1000;
 }
-
 .sidebar-menu.active {
     left: 0;
 }
-
 .container {
     position: fixed;
     top: 30px;
@@ -102,14 +106,11 @@ h1 {
     align-items: center;
     z-index: 2000;
 }
-
 .toque{
     margin-left: 130px;
     margin-top: 220px;
     display: none;
 }
-
-
 label {
     cursor: pointer;
     position: relative;
@@ -118,7 +119,6 @@ label {
     width: 60px;
     z-index: 2001;
 }
-
 label span {
     position: absolute;
     margin-top: 10px;
@@ -129,40 +129,32 @@ label span {
     background: #86e5bd;
     transition: 0.25s ease-in-out;
 }
-
 #checkbox-menu:checked + label span:nth-child(1) {
     transform: rotate(-45deg);
     top: 15px;
     background-color: white;
 }
-
 #checkbox-menu:checked + label span:nth-child(2) {
     opacity: 0;
 }
-
 #checkbox-menu:checked + label span:nth-child(3) {
     transform: rotate(45deg);
     top: 15px;
     background-color: white;
 }
-
 #checkbox-menu, #checkbox-menu-consulta {
     position: absolute;
     opacity: 0;
 }
-
 label span:nth-child(1) {
     top: 0;
 }
-
 label span:nth-child(2) {
     top: 15px;
 }
-
 label span:nth-child(3) {
     top: 30px;
 }
-
 .texto-menu {
     font-family: "Varela Round", sans-serif;
     font-size: 35px;
@@ -173,7 +165,6 @@ label span:nth-child(3) {
     padding-left: 2px;
     text-decoration: none;
 }
-
 .texto-menu1 {
     font-family: "Varela Round", sans-serif;
     font-size: 35px;
@@ -183,7 +174,6 @@ label span:nth-child(3) {
     color: white;
     text-decoration: none;
 }
-
 .texto-menu2 {
     font-family: "Varela Round", sans-serif;
     font-size: 30px;
@@ -193,7 +183,6 @@ label span:nth-child(3) {
     color: white;
     text-decoration: none;
 }
-
 .texto-menu3 {
     font-family: "Varela Round", sans-serif;
     font-size: 30px;
@@ -203,7 +192,6 @@ label span:nth-child(3) {
     color: white;
     text-decoration: none;
 }
-
 .container-formas {
     display: flex;
     align-items: flex-start; /* Alinha os itens ao topo */
@@ -212,7 +200,6 @@ label span:nth-child(3) {
     padding-left: 20px; /* Espaçamento à esquerda para afastar da borda */
     padding-right: 20px; /* Espaçamento à direita para afastar da borda */
 }
-
 .quadrados {
     display: flex;
     flex-direction: column; /* Organiza os quadrados em coluna */
@@ -220,14 +207,12 @@ label span:nth-child(3) {
     margin-top: 30px;
     margin-left: 20px;
 }
-
 .texto-retangulo{
     font-family: "Bebas Neue", sans-serif;
     font-size: 30px;
     color: #4DB6AC;
     text-shadow: 0 10px 20px rgba(0, 0, 0, 0.247), 0 10px 30px rgba(0, 0, 0, 0.247);
 }
-
 .retangulos {
     display: flex;
     flex-direction: column; /* Organiza os retângulos em coluna */
@@ -235,18 +220,7 @@ label span:nth-child(3) {
     width: 90%; /* Largura do retângulo */
     gap: 20px;
 }
-
-Para centralizar o texto horizontalmente e posicioná-lo verticalmente na parte inferior do quadrado, você pode ajustar o estilo CSS da classe `.texto-doenca` e `.quadrado`. Abaixo está a alteração necessária:
-
-1. Altere a propriedade `position` da classe `.quadrado` para `relative` para criar um contexto de posicionamento para seus elementos filhos.
-2. Defina a propriedade `position` da classe `.texto-doenca` para `absolute` e ajuste as propriedades `bottom` e `left` para centralizar o texto horizontalmente e posicioná-lo na parte inferior.
-
-Aqui está o código CSS atualizado:
-
-```css
-/* ... (restante do CSS permanece inalterado) ... */
-
-.quadrado{
+.quadrado {
     margin-top: 100px;
     height: 400px;
     width: 300px;
@@ -254,18 +228,17 @@ Aqui está o código CSS atualizado:
     border: 5px solid #4DB6AC;
 }
     
+    
 .imgtoque{
         position: absolute;
         z-index: -1;
         left: 65px;
 }
-
 .imgtoque1{
     position: absolute;
     z-index: -1;
     left: -30px;
 }
-
 .retangulo {
     margin-top: 100px;
     text-align: center;
@@ -279,25 +252,21 @@ Aqui está o código CSS atualizado:
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
 }
-
 .localizacao {
     position: absolute;
     top: 235px;
     left: 20px;
     transform: scale(1.5);
 }
-
 .casinha {
     position: absolute;
     top: 150px;
     left: 20px;
 }
-
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 50px;
     }
-
     
 .texto-agende{
     position: fixed;
@@ -307,37 +276,30 @@ Aqui está o código CSS atualizado:
     font-size: 40px;
     color: #86e5bd;
 }
-
     label span {
         width: 80%;
     }
-
     .logo {
         width: 110px;
         height: 110px;
         margin-left: 35px;
     }
-
     .container-logo {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
     body {
         flex-direction: column;
     }
-
     .sidebar-menu.active {
         width: 65%;
     }
-
     .texto-retangulo{
         margin-top: 80px;
         font-size: 20px;
     }
-
     .retangulo.ativo {
         display: block; /* Mostra o retângulo quando ativo */
         }
