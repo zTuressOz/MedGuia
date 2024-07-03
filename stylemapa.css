@@ -260,7 +260,7 @@ label span:nth-child(3) {
     height: 100%;
     position: fixed;
     top: 0;
-    left: -60vw;
+    left: -80vw;
     transition: 0.5s;
     z-index: 1000;
 }
@@ -346,6 +346,17 @@ a {
 .consulta-menu.active{
     bottom: -36%;
 }
+
+.texto-menu3 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 30px;
+    position: absolute;
+    left: 30px;
+    top: 420px;
+    color: white;
+    text-decoration: none;
+}
+
 
 .casinha {
     position: absolute;
@@ -477,7 +488,7 @@ a {
 
 
    .sidebar-menu.active {
-    width: 60%;
+    width: 65%;
 }
 
    .consulta-menu.active{

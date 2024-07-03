@@ -15,7 +15,7 @@ document.getElementById('consultas-link2').addEventListener('click', function(ev
     event.preventDefault(); // Previne o comportamento padrão de redirecionamento
 
     // Ativa o menu de consultas
-    var menu =document.querySelector('.sidebar-menu');
+    var menu = document.querySelector('.sidebar-menu');
     var consultasMenu = document.querySelector('.consulta-menu');
     menu.classList.toggle('active');
     consultasMenu.classList.toggle('active');

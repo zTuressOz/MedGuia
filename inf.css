@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merienda:wght@300..900&family=Playwrite+ES+Deco:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:root {
+    --titulo-rgb: linear-gradient(to left, rgba(255, 255, 255, 0.301), #4ba18a3d, rgba(255, 255, 255, 0.315));
+    --corpo-rgb: linear-gradient(to bottom, #03ac7fbd,  white, white);
+    --botao-transicao: linear-gradient(to left, rgb(2, 152, 172), rgb(3, 113, 238), rgb(2, 152, 172));
+    --menu-rgb: linear-gradient(to bottom, rgb(1, 104, 117), rgb(7, 97, 201), rgb(1, 104, 117));
+    --branco: white;
+    --borda-cabecalho: #00ACC1;
+    --verde-escuro: rgb(1, 66, 36);
+    --azul: rgb(7, 97, 201);
+}
+
+footer{
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5px;
+    width: 100%;
+    background: #03ac7fbd;
+    color: white;
+}
+
+
+body {
+    background-color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+    position: fixed;
+    top: 0;
+    background: var(--titulo-rgb);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: 0.75s ease;
+    padding: 0 20px; /* Ajuste o espaçamento conforme necessário */
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+}
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 90px;
+    color: #86e5bd;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #4DB6AC;
+    width: 15vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -80vw;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.sidebar-menu.active {
+    left: 0;
+}
+
+.container {
+    position: fixed;
+    top: 30px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    z-index: 2000;
+}
+
+.toque{
+    margin-left: 130px;
+    margin-top: 220px;
+    display: none;
+}
+
+
+label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 60px;
+    z-index: 2001;
+}
+
+label span {
+    position: absolute;
+    margin-top: 10px;
+    display: block;
+    height: 10px;
+    width: 100%;
+    border-radius: 30px;
+    background: #86e5bd;
+    transition: 0.25s ease-in-out;
+}
+
+#checkbox-menu:checked + label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 15px;
+    background-color: white;
+}
+
+#checkbox-menu:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+
+#checkbox-menu:checked + label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 15px;
+    background-color: white;
+}
+
+#checkbox-menu, #checkbox-menu-consulta {
+    position: absolute;
+    opacity: 0;
+}
+
+label span:nth-child(1) {
+    top: 0;
+}
+
+label span:nth-child(2) {
+    top: 15px;
+}
+
+label span:nth-child(3) {
+    top: 30px;
+}
+
+.texto-menu {
+    font-family: "Varela Round", sans-serif;
+    font-size: 35px;
+    position: absolute;
+    left: 60px;
+    top: 150px;
+    color: white;
+    padding-left: 2px;
+    text-decoration: none;
+}
+
+.texto-menu1 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 35px;
+    position: absolute;
+    left: 60px;
+    top: 230px;
+    color: white;
+    text-decoration: none;
+}
+
+.texto-menu2 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 30px;
+    position: absolute;
+    left: 30px;
+    top: 310px;
+    color: white;
+    text-decoration: none;
+}
+
+.texto-menu3 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 30px;
+    position: absolute;
+    left: 30px;
+    top: 420px;
+    color: white;
+    text-decoration: none;
+}
+
+.container-formas {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens ao topo */
+    margin-top: 20px; /* Espaçamento do topo */
+    margin-bottom: 50px;
+    padding-left: 20px; /* Espaçamento à esquerda para afastar da borda */
+    padding-right: 20px; /* Espaçamento à direita para afastar da borda */
+}
+
+.quadrados {
+    display: flex;
+    flex-direction: column; /* Organiza os quadrados em coluna */
+    gap: 20px; /* Espaçamento entre os quadrados */
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.texto-retangulo{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 70px;
+    color: #4DB6AC;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.247), 0 10px 30px rgba(0, 0, 0, 0.247);
+}
+
+.retangulos {
+    display: flex;
+    flex-direction: column; /* Organiza os retângulos em coluna */
+    margin-top: 30px;
+    width: 90%; /* Largura do retângulo */
+    gap: 20px;
+}
+
+.quadrado {
+    margin-top: 100px;
+    height: 400px;
+    width: 300px;
+    border-radius: 150px;
+    border: 5px solid #4DB6AC;
+}
+    
+    
+.imgtoque{
+        position: absolute;
+        z-index: -1;
+        left: 65px;
+}
+
+.imgtoque1{
+    position: absolute;
+    z-index: -1;
+    left: -30px;
+}
+
+.retangulo {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 30px;
+    height: 400px; /* Altura do retângulo */
+    border-radius: 150px;
+    border: 5px solid #4DB6AC;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    transition: top 0.3s ease, left 0.3s ease; /* Transição suave para top e left */
+    display: flex; /* Adiciona flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.localizacao {
+    position: absolute;
+    top: 235px;
+    left: 20px;
+    transform: scale(1.5);
+}
+
+.casinha {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    
+.texto-agende{
+    position: fixed;
+    text-align: center;
+    top: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    color: #86e5bd;
+}
+
+    label span {
+        width: 80%;
+    }
+
+    .logo {
+        width: 110px;
+        height: 110px;
+        margin-left: 35px;
+    }
+
+    .container-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar-menu.active {
+        width: 65%;
+    }
+
+    .texto-retangulo{
+        margin-top: 80px;
+        font-size: 34px;
+    }
+
+    .retangulo.ativo {
+        display: block; /* Mostra o retângulo quando ativo */
+        }
+    
+        .container-formas {
+        display: flex;
+        flex-direction: column; /* Organiza os retângulos em coluna */
+        align-items: flex-start; /* Alinha os itens ao topo */
+    
+    }
+    
+        .toque{
+        display: block;
+    }
+    
+        .container-quadrados {
+                    align-items: center; /* Centraliza os itens na coluna em telas menores */
+                    padding-left: 0; /* Remove o padding à esquerda em telas menores */
+                }
+    
+        .quadrado {
+             margin-bottom: 20px; /* Adiciona espaçamento inferior entre os quadrados em telas menores */
+             margin-right: 0; /* Remove o espaçamento à direita em telas menores */
+         }
+    
+        .retangulo {
+            position: absolute; /* Posicionamento absoluto para alinhar com o quadrado */
+            height: 400px; /* Altura do retângulo */
+            width: 300px; /* Largura do retângulo */
+            border-radius: 150px; /* Raio do retângulo */
+            border: 5px solid #4DB6AC; /* Estilo da borda */
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5); /* Sombra do retângulo */
+            display: none; /* Inicialmente escondido */
+            transition: top 0.3s ease, left 0.3s ease; /* Transição suave para top e left */
+            display: flex; /* Adiciona flexbox */
+            align-items: center; /* Centraliza verticalmente */
+            justify-content: center; /* Centraliza horizontalmente */
+        }
+}

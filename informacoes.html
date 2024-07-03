@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacoes-MedGuia</title>
+    <link rel="stylesheet" href="inf.css">
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <div class="logo"><img src="medguia.png" width="350"></div>
+            <div class="titulo-primario">
+                <h1>MedGuia</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="corpo">
+        <div class="container-formas">
+            <div class="quadrados">
+                <div class="quadrado" data-retangulo="retangulo1"><img src="gripe.png" class="imgtoque" width="250"><img src="toque.png" width="170" class="toque"></div>
+                <div class="quadrado" data-retangulo="retangulo2"><img src="dengue.jpg" class="imgtoque1" width="450"><img src="toque.png" width="170" class="toque"></div>
+                <div class="quadrado" data-retangulo="retangulo3"><img src="informacoes.png" class="imgtoque" width="250"><img src="toque.png" width="170" class="toque"></div>
+            </div>
+    
+            <div class="retangulos">
+                <div class="retangulo" id="retangulo1"><p class="texto-retangulo">Com nosso webmapa você consegue ver locais onde há surtos de doenças e edifícios de saúde mais próximos em sua cidade!<a href="mapa.html">   <br>Mapa</a></p></div>
+                <div class="retangulo" id="retangulo2"><p class="texto-retangulo">Aqui você pode agendar consultas online!<a id="consultas-link" href="#"><br> AGENDAR CONSULTA</a></p></div>
+                <div class="retangulo" id="retangulo3"><p class="texto-retangulo">Obtenha informações essenciais sobre doenças<a href="informacoes.html"><br>informações sobre doenças</a></p></div>
+            </div>
+        </div>
+
+    <nav class="sidebar-menu">
+        <a href="index.html"><img src="inicio.png" alt="inicio" width="35" class="casinha"></a>
+        <a href="index.html" class="texto-menu">INÍCIO</a>
+        <a href="mapa.html"><img src="localizacao.png" alt="inicio" width="35" class="localizacao"></a>
+        <a href="mapa.html" class="texto-menu1">MAPA</a>
+        <a id="consultas-link2" href="#" class="texto-menu2"><p>AGENDAR CONSULTA</p></a>
+        <a href="informacoes.html" class="texto-menu3">INFORMAÇÕES SOBRE DOENÇAS</a>
+    </nav>
+
+
+</section>
+
+
+    <div class="container">
+        <input type="checkbox" id="checkbox-menu" class="checkbox">
+        <label for="checkbox-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+
+
+        <footer>
+        Equipe MedGuia João XXIII
+    </footer>
+
+    <script src="inf.js"></script>
+
+</body>
+</html>
