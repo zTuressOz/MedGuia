@@ -12,48 +12,42 @@ document.addEventListener('DOMContentLoaded', function() {
     const quadrados = document.querySelectorAll('.quadrado');
     const retangulos = document.querySelectorAll('.retangulo');
 
-
-
     if (isMobile) {
-
-            // Oculta todos os retângulos no carregamento da página
-    retangulos.forEach(retangulo => {
-        retangulo.style.display = 'none';
-    });
-    
+        // Hide all rectangles on page load
+        retangulos.forEach(retangulo => {
+            retangulo.style.display = 'none';
+        });
 
         quadrados.forEach(quadrado => {
             quadrado.addEventListener('click', function() {
                 const retanguloId = this.getAttribute('data-retangulo');
                 const retangulo = document.getElementById(retanguloId);
 
-                // Esconde o quadrado
-                this.style.opacity = '0'; // Altera a opacidade para "esconder"
-                this.style.pointerEvents = 'none'; // Desativa eventos de clique no quadrado
+                // Hide the square
+                this.style.opacity = '0'; // Change opacity to "hide"
+                this.style.pointerEvents = 'none'; // Disable click events on the square
 
-                // Mostra o retângulo e ajusta sua posição e tamanho
+                // Show the rectangle and adjust its position and size
                 retangulo.style.display = 'block';
-                retangulo.style.opacity = '1'; // Garante que o retângulo esteja visível
+                retangulo.style.opacity = '1'; // Ensure the rectangle is visible
 
-                // Ajusta a posição do retângulo para alinhar com o quadrado clicado
-                const quadradoRect = this.getBoundingClientRect(); // Obtém as dimensões do quadrado
-                const corpoRect = document.querySelector('.corpo').getBoundingClientRect(); // Obtém as dimensões do corpo
+                // Adjust the position of the rectangle to align with the clicked square
+                const quadradoRect = this.getBoundingClientRect(); // Get square dimensions
+                const corpoRect = document.querySelector('.corpo').getBoundingClientRect(); // Get body dimensions
 
-                retangulo.style.top = (quadradoRect.top - corpoRect.top) + 'px'; // Ajuste de posição vertical
-                retangulo.style.left = (quadradoRect.left - corpoRect.left) + 'px'; // Ajuste de posição horizontal
+                retangulo.style.top = (quadradoRect.top - corpoRect.top) + 'px'; // Vertical position adjustment
+                retangulo.style.left = (quadradoRect.left - corpoRect.left) + 'px'; // Horizontal position adjustment
 
-                // Adiciona evento de clique para restaurar ao quadrado
+                // Add click event to restore the square
                 retangulo.addEventListener('click', function() {
-                    // Mostra o quadrado novamente
-                    quadrado.style.opacity = '1'; // Restaura a opacidade
-                    quadrado.style.pointerEvents = 'auto'; // Ativa eventos de clique no quadrado
+                    // Show the square again
+                    quadrado.style.opacity = '1'; // Restore opacity
+                    quadrado.style.pointerEvents = 'auto'; // Enable click events on the square
 
-                    // Esconde o retângulo
+                    // Hide the rectangle
                     this.style.display = 'none';
                 });
             });
         });
     }
 });
-
-
