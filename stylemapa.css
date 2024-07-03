@@ -38,6 +38,68 @@ h1 {
     color: #86e5bd;
 }
 
+.consulta-menu h2{
+    position: fixed;
+    top: 50px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    color: #86e5bd;
+}
+
+
+#form-email {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    padding: 20px;
+    text-align: center;
+}
+
+#form-email input,
+#form-email textarea, #form-email select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#form-email textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#form-email .enviar-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.texto-menu2 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 35px;
+    position: absolute;
+    left: 30px;
+    top: 310px;
+    color: white;
+}
+
+#form-email .enviar-button:hover {
+    background-color: #0056b3;
+}
+
+#form-email input:required:invalid,
+#form-email textarea:required:invalid, #form-email select:required:invalid {
+    border: 1px solid #4DB6AC;
+}
+
+#form-email input:required:valid,
+#form-email textarea:required:valid, #form-email select:required:valid  {
+    border: 1px solid #4DB6AC;
+}
 .container-logo {
     display: flex;
     align-items: center;
@@ -73,10 +135,12 @@ header {
     z-index: 2000;
 }
 
-#checkbox-menu {
+#checkbox-menu, #checkbox-menu-consulta {
     position: absolute;
     opacity: 0;
 }
+
+
 
 footer {
     font-family: "Poppins", sans-serif;
@@ -85,8 +149,11 @@ footer {
     text-align: center;
     padding-top: 5px;
     width: 100%;
-    background-color: #03ac7fbd;
+    background-color: #03ac7f;
     color: white;
+    margin-top: 20px;
+    position: relative; /* Garante o espaço para o rodapé */
+    z-index: 1000; /* Z-index inferior ao do bottom-fixed */
 }
 
 label {
@@ -95,15 +162,15 @@ label {
     display: block;
     height: 45px;
     width: 60px;
-    z-index: 2001;
 }
 
 label span {
     position: absolute;
+    margin-top: 10px;
     display: block;
-    height: 5px;
+    height: 10px;
     width: 100%;
-    border-radius: 2px;
+    border-radius: 30px;
     background: #86e5bd;
     transition: 0.25s ease-in-out;
 }
@@ -118,6 +185,55 @@ label span:nth-child(2) {
 
 label span:nth-child(3) {
     top: 30px;
+}
+
+.container-consulta .checkbox-consulta:not(:checked) + label span:nth-child(1) {
+    background-color: black; /* Estilo quando não está checado */
+    rotate: -50deg;
+    height: 3px;
+    width: 60%;
+    top: 25%;
+    right: 40%;
+}
+
+.container-consulta .checkbox-consulta:not(:checked) + label span:nth-child(2) {
+    background-color: black; /* Estilo quando não está checado */
+    rotate: 50deg;
+    top: 0px;
+    height: 3px;
+    left: 39%;
+    top: 25%;
+    width: 60%;
+}
+
+.container-consulta .checkbox-consulta:checked + label span:nth-child(2) {
+    background-color: black; /* Estilo quando não está checado */
+    rotate: 45deg;
+    top: 0px;
+    height: 3px;
+    left: 20%;
+    top: 26%;
+    width: 60%;
+}
+
+.container-consulta .checkbox-consulta:checked + label span:nth-child(1) {
+    background-color: black; /* Estilo quando não está checado */
+    rotate: -45deg;
+    height: 3px;
+    width: 60%;
+    top: 26%;
+    right: 20%;
+}
+
+.quadrado{
+    background-color: #fff;
+    border-top: 1px solid rgb(0, 0, 0, 1);
+    border-left: 1px solid rgb(0, 0, 0, 1);
+    border-right: 1px solid rgb(0, 0, 0, 1);
+    border-radius: 10px 10px 0 0;
+    position: fixed;
+    bottom: 0;
+    height: 40px;
 }
 
 #checkbox-menu:checked + label span:nth-child(1) {
@@ -148,6 +264,28 @@ label span:nth-child(3) {
     transition: 0.5s;
     z-index: 1000;
 }
+
+.consulta-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center;
+    background-color: #ffffff;
+    width: 80%; /* Ajuste a largura conforme necessário */
+    height: 80vh; /* Ajuste a altura conforme necessário */
+    position: fixed;
+    bottom: -150%;
+    left: 50%; /* Posiciona no centro horizontal */
+    transform: translate(-50%, -52%); /* Centraliza completamente */
+    z-index: 1000;
+    transition: 0.5s;
+    margin-top: 60px;
+    border-radius: 30px;
+    box-shadow: 0 0 10000000px rgba(0, 0, 0, 1);
+    border: 2px solid #00ACC1;
+}
+
 
 .texto-menu {
     font-family: "Varela Round", sans-serif;
@@ -205,6 +343,10 @@ a {
     left: 0;
 }
 
+.consulta-menu.active{
+    bottom: -36%;
+}
+
 .casinha {
     position: absolute;
     top: 150px;
@@ -223,14 +365,16 @@ a {
 
 #map-container {
     position: relative;
-    width: 100%;
+    width: 90%;
     height: 600px; /* Defina a altura desejada para o mapa */
-    margin-top: 20px;
+    margin-top: 150px;
+
 }
 
 #map {
     width: 100%;
     height: 100%;
+    border-radius: 30px;
 }
 
 .container-buscas {
@@ -244,20 +388,27 @@ a {
 .busca,
 .busca1 {
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     padding: 20px;
     width: calc(50% - 20px);
+    display: flex; /* Adiciona flexbox */
+    justify-content: space-between; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    flex-direction: column; /* Ajusta para alinhar itens na coluna */
+    margin-bottom: 20px;
 }
 
 .busca h2,
 .busca1 h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 1px;
+    text-align: center; /* Ajusta o texto para o centro */
 }
 
 .busca p,
 .busca1 p {
-    margin-bottom: 5px;
+    margin-top: 0px;
+    text-align: center; /* Ajusta o texto para o centro */
 }
 
 .busca input,
@@ -285,168 +436,26 @@ a {
 
 .search-button,
 .search-button1 {
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000; /* Ajuste a cor do texto conforme necessário */
     border: none;
-    padding: 10px 20
-
-.search-button:hover,
-.search-button1:hover {
-    background-color: #555;
-}
-
-.busca {
-    position: absolute;
-    left: 1450px;
-    top: 100px;
-    transform: scale(1.2);
-}
-
-.busca1 {
-    position: absolute;
-    left: 1450px;
-    top: 450px;
-    transform: scale(1.2);
-}
-
-.texto-menu {
-    font-family: "Varela Round", sans-serif;
-    font-size: 35px;
-    position: absolute;
-    left: 60px;
-    top: 150px;
-    color: white;
+    padding: 10px 20px; /* Ajuste o padding conforme necessário */
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+    margin: auto; /* Centraliza horizontalmente */
 }
 
 .endereco {
+    padding-top: 10px;
     font-family: "Varela Round", sans-serif;
-    color: white;
-    font-size: 20px
-    padding-left: 65px
-}
-
-
-.endereco1{
-    font-family: "Varela Round", sans-serif;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 20px;
-    padding-left: 65px;
-}
-
-.search-button {
-    position: absolute;
-    border: none;
-    background: none;
-    padding: 0;
-    margin-left: 1780px;
-    margin-top: 190px;
-}
-
-.search-button1{
-    position: absolute;
-    border: none;
-    background: none;
-    padding: 0;
-    margin-left: 1780px;
-    margin-top: 475px;
-}
-
-
-.search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px; 
-}
-
-#address-input1 {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 300px; 
-    margin-right: 10px; 
-    margin-top: 10px;
-}
-
-#address-input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 300px; 
-    margin-right: 10px; 
-}
-
-
-#random-address-input
-{
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 300px; 
-    margin-right: 10px; 
-    margin-top: 200px;
-}
-
-#marker-text-select{
-        padding: 10px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        width: 300px; 
-        margin-right: 10px; 
-
-}
-
-#marker-text-select1{
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 300px; 
-    margin-right: 10px; 
-    margin-top: 1vh;
-
-}
-
-.search-button:hover, .search-button1:hover {
-    transition: 0.5s;
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-
-#address-input:focus {
-    outline: none; 
-    border-color: #007bff; 
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); 
-}
-
-.side-panel {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 300px; /* Largura desejada para o painel ao lado do mapa */
-    height: 100vh; /* Altura ajustada para ocupar toda a altura da tela */
-    background-color: #f0f0f0; /* Cor de fundo do painel */
-    padding: 20px; /* Espaçamento interno */
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1); /* Sombra à esquerda */
-    z-index: 1000; /* Z-index para garantir que fique sobre o mapa */
-    overflow-y: auto; /* Adicionar scroll vertical se necessário */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza os elementos verticalmente */
-    justify-content: flex-start; /* Inicia o conteúdo no topo */
-}
-
-.side-panel .busca {
-    margin-bottom: 20px; /* Espaçamento entre as seções de busca */
-}
-
-.side-panel .busca:last-child {
-    margin-bottom: 0; /* Remove margem inferior do último elemento */
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -457,19 +466,22 @@ a {
         box-shadow: none;
    }
 
+   .consulta-menu.active{
+    bottom: -38%;
+}
+
 #map-container{
-  width:80%;
-  margin-left: 42px;
+  width:90%;
   height:400px;
   margin-top:150px;
 }
 
     h1 {
-        font-size: 10px;
+        font-size: 50px;
     }
 
-    label span {
-        width: 80%;
+    label span1 {
+        width: 100%;
     }
 
     .logo {

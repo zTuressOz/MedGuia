@@ -1,3 +1,30 @@
+// Seleciona o elemento corpo
+const corpo = document.querySelector('.corpo');
+// Seleciona o elemento consulta-menu
+const menuConsulta = document.querySelector('.consulta-menu');
+const menuButtonConsulta = document.querySelector('#checkbox-menu-consulta');
+const menu = document.querySelector('.sidebar-menu');
+const menuButton = document.querySelector('#checkbox-menu');
+
+menuButton.addEventListener('change', () => {
+    menu.classList.toggle('active');
+});
+
+document.getElementById('consultas-link2').addEventListener('click', function(event) {
+    event.preventDefault(); // Previne o comportamento padrão de redirecionamento
+
+    // Ativa o menu de consultas
+    var menu =document.querySelector('.sidebar-menu');
+    var consultasMenu = document.querySelector('.consulta-menu');
+    menu.classList.toggle('active');
+    consultasMenu.classList.toggle('active');
+});
+
+
+menuButtonConsulta.addEventListener('change', () => {
+    menuConsulta.classList.toggle('active');
+});
+
 function initMap() {
     var map = L.map('map').setView([-22.9068, -43.1729], 13);
 
@@ -185,17 +212,12 @@ function initMap() {
                         .reduce((acc, val) => acc.concat(val), []);
                 }
 
-                            // Ajuste o tamanho do raio para aumentar a área do polígono
-            var radius = 200; // Defina o raio desejado em metros
-    
                 var area = L.polygon(coordinates, {
                     color: 'green',
                     fillColor: '#7cff81',
                     fillOpacity: 0.5
-
                 }).addTo(markersLayer);
 
-    
                 var popupContent = '';
                 if (element.tags.name) {
                     popupContent += '<strong>' + element.tags.name + '</strong><br>';
@@ -215,8 +237,10 @@ function initMap() {
                 if (element.tags['contact:phone']) {
                     popupContent += 'Telefone: ' + element.tags['contact:phone'];
                 }
-    
-                area.bindPopup(popupContent).openPopup();
+
+                area.bindPopup(popupContent).on('popupopen', function() {
+                    document.getElementById('local-de-atendimento').value = element.tags.name;
+                }).openPopup();
             });
         })
         .catch(function(error) {
@@ -278,7 +302,9 @@ function initMap() {
 
                     L.marker([element.lat, element.lon], { icon: icon })
                     .addTo(markersLayer)
-                    .bindPopup(popupContent).openPopup();
+                    .bindPopup(popupContent).on('popupopen', function() {
+                        document.getElementById('local-de-atendimento').value = element.tags.name;
+                    }).openPopup();
                 }
             });
         })
@@ -341,7 +367,9 @@ function initMap() {
 
                     L.marker([element.lat, element.lon], { icon: icon })
                     .addTo(markersLayer)
-                    .bindPopup(popupContent).openPopup();
+                    .bindPopup(popupContent).on('popupopen', function() {
+                        document.getElementById('local-de-atendimento').value = element.tags.name;
+                    }).openPopup();
                 }
             });
         })
@@ -404,7 +432,9 @@ function initMap() {
 
                     L.marker([element.lat, element.lon], { icon: icon })
                     .addTo(markersLayer)
-                    .bindPopup(popupContent).openPopup();
+                    .bindPopup(popupContent).on('popupopen', function() {
+                        document.getElementById('local-de-atendimento').value = element.tags.name;
+                    }).openPopup();
                 }
             });
         })
@@ -412,9 +442,6 @@ function initMap() {
             console.error('Erro ao buscar hospitais e clínicas:', error);
         });
     }
-
-
-
 
     function fetchClinics(lat, lon) {
         var overpassUrl = 'https://overpass-api.de/api/interpreter';
@@ -470,7 +497,9 @@ function initMap() {
 
                     L.marker([element.lat, element.lon], { icon: icon })
                     .addTo(markersLayer)
-                    .bindPopup(popupContent).openPopup();
+                    .bindPopup(popupContent).on('popupopen', function() {
+                        document.getElementById('local-de-atendimento').value = element.tags.name;
+                    }).openPopup();
                 }
             });
         })
@@ -533,7 +562,9 @@ function initMap() {
 
                     L.marker([element.lat, element.lon], { icon: icon })
                     .addTo(markersLayer)
-                    .bindPopup(popupContent).openPopup();
+                    .bindPopup(popupContent).on('popupopen', function() {
+                        document.getElementById('local-de-atendimento').value = element.tags.name;
+                    }).openPopup();
                 }
             });
         })
@@ -541,7 +572,6 @@ function initMap() {
             console.error('Erro ao buscar hospitais e clínicas:', error);
         });
     }
-
 
     document.addEventListener('DOMContentLoaded', function() {
         initMap();

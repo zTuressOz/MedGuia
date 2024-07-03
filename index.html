@@ -44,7 +44,7 @@
 
             <div class="retangulos">
                 <div class="retangulo" id="retangulo1"><p class="texto-retangulo">Com nosso webmapa você consegue ver locais onde há surtos de doenças e edifícios de saúde mais próximos em sua cidade!<a href="mapa.html">   <br>Mapa</a></p></div>
-                <div class="retangulo" id="retangulo2"></div>
+                <div class="retangulo" id="retangulo2"><p class="texto-retangulo">Aqui você pode agendar consultas online!<a id="consultas-link" href="#"><br> AGENDAR CONSULTA</a></p></div>
                 <div class="retangulo" id="retangulo3"></div>
             </div>
         </div>
@@ -54,8 +54,65 @@
             <a href="index.html" class="texto-menu">INÍCIO</a>
             <a href="mapa.html"><img src="localizacao.png" alt="inicio" width="35" class="localizacao"></a>
             <a href="mapa.html" class="texto-menu1">MAPA</a>
+            <a id="consultas-link2" href="#" class="texto-menu2"><p>AGENDAR CONSULTA</p></a>
         </nav>
+
+<call-us-selector phonesystem-url="https://1860.3cx.cloud" party="medguiaguia"></call-us-selector>
+ 
+<script defer src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js" id="tcx-callus-js" charset="utf-8"></script>
+        <nav class="consulta-menu">
+            <p class="texto-agende">Agende sua Consulta!</p>
+                <form id="form-email" action="https://api.staticforms.xyz/submit" method="POST">
+                    <input type="hidden" name="accessKey" value="0f134f2e-7419-4d86-b8d7-b80f248ee4f8">
+                    <input type="text" name="$Nome" placeholder="Seu nome" required>
+                    <input type="text" name="$Email" placeholder="Seu email" required>
+                    <input type="text" name="$Telefone" placeholder="Seu Número de telefone" required>
+                    <input type="text" id="local-de-atendimento" name="$Local de atendimento" placeholder="Local de atendimento" required>
+                    <select type="text" name="^$Horário de preferência">
+                    <option value="" disabled selected>Qual seu horário de preferência?</option>
+                    <option value="00:00">00:00</option>
+                    <option value="01:00">01:00</option>
+                    <option value="02:00">02:00</option>
+                    <option value="03:00">03:00</option>
+                    <option value="04:00">04:00</option>
+                    <option value="05:00">05:00</option>
+                    <option value="06:00">06:00</option>
+                    <option value="07:00">07:00</option>
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="21:00">21:00</option>
+                    <option value="22:00">22:00</option>
+                    <option value="23:00">23:00</option>
+                    </select>
+                    <textarea name="$Mensagens" placeholder="Do que você precisa?"required></textarea>
+                    <button type="submit" class="enviar-button" value="Submit">Enviar</button>
+                    <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html">
+                </form>
+            </nav>
+    
+
     </section>
+
+    <div class = quadrado1>
+        <div class="container-consulta">
+            <input type="checkbox" id="checkbox-menu-consulta" class="checkbox-consulta">
+            <label for="checkbox-menu-consulta">
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </div>
 
     <footer>
         Equipe MedGuia João XXIII

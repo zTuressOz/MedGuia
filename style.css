@@ -26,6 +26,9 @@ img {
 
 body {
     background-color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .container-fundo-imagem {
@@ -91,6 +94,15 @@ header {
     transition: 0.75s ease;
 }
 
+.texto-agende{
+    position: fixed;
+    text-align: center;
+    top: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    color: #86e5bd;
+}
+
 footer{
     font-family: "Poppins", sans-serif;
     align-items: center;
@@ -102,6 +114,124 @@ footer{
     color: white;
 }
 
+.quadrado1{
+    background-color: #fff;
+    border-top: 1px solid rgb(0, 0, 0, 1);
+    border-left: 1px solid rgb(0, 0, 0, 1);
+    border-right: 1px solid rgb(0, 0, 0, 1);
+    border-radius: 10px 10px 0 0;
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+}
+
+
+.consulta-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: #ffffff;
+    width: 80%; /* Ajuste a largura conforme necessário */
+    height: 80vh; /* Ajuste a altura conforme necessário */
+    position: fixed;
+    bottom: -150%;
+    left: 50%; /* Posiciona no centro horizontal */
+    transform: translate(-50%, -52%); /* Centraliza completamente */
+    z-index: 1000;
+    transition: 0.5s;
+    margin-top: 60px;
+    border-radius: 30px;
+    box-shadow: 0 0 10000000px rgba(0, 0, 0, 1);
+    border: 2px solid #00ACC1;
+}
+
+.consulta-menu.active{
+    bottom: -36%;
+}
+
+
+#form-email {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    padding: 20px;
+    text-align: center;
+}
+
+#form-email input,
+#form-email textarea, #form-email select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#form-email textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#form-email .enviar-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#form-email .enviar-button:hover {
+    background-color: #0056b3;
+}
+
+#form-email input:required:invalid,
+#form-email textarea:required:invalid {
+    border: 1px solid #4DB6AC;
+}
+
+#form-email input:required:valid,
+#form-email textarea:required:valid {
+    border: 1px solid #ccc;
+}
+.container-consulta .checkbox-consulta:not(:checked) + label span:nth-child(1) {
+    background-color: black; /* Estilo quando não está checado */
+    rotate: -50deg;
+    height: 3px;
+    width: 60%;
+    top: 25%;
+    right: 40%;
+}
+
+.container-consulta .checkbox-consulta:not(:checked) + label span:nth-child(2) {
+    background-color: black; /* Estilo quando não está checado */
+    rotate: 50deg;
+    top: 0px;
+    height: 3px;
+    left: 39%;
+    top: 25%;
+    width: 60%;
+}
+
+.container-consulta .checkbox-consulta:checked + label span:nth-child(2) {
+    background-color: black; /* Estilo quando não está checado */
+    rotate: 50deg;
+    top: 0px;
+    height: 3px;
+    left: 39%;
+    top: 25%;
+    width: 60%;
+}
+
+.container-consulta .checkbox-consulta:checked + label span:nth-child(1) {
+    background-color: black; /* Estilo quando não está checado */
+    rotate: -50deg;
+    height: 3px;
+    width: 60%;
+    top: 25%;
+    right: 40%;
+}
 
 h1 {
     font-family: "Bebas Neue", sans-serif;
@@ -146,7 +276,7 @@ h4 {
     z-index: 2000;
 }
 
-#checkbox-menu {
+#checkbox-menu, #checkbox-menu-consulta {
     position: absolute;
     opacity: 0;
 }
@@ -231,12 +361,23 @@ label span:nth-child(3) {
     color: white;
 }
 
+.texto-menu2 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 35px;
+    position: absolute;
+    left: 30px;
+    top: 310px;
+    color: white;
+}
+
 .localizacao {
     position: absolute;
     top: 235px;
     left: 20px;
     transform: scale(1.5);
 }
+
+
 
 .localizacao:hover {
     transition: 1s;
@@ -350,6 +491,16 @@ a {
     h1 {
         font-size: 50px;
     }
+
+    
+.texto-agende{
+    position: fixed;
+    text-align: center;
+    top: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    color: #86e5bd;
+}
 
     label span {
         width: 80%;

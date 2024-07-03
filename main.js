@@ -1,8 +1,32 @@
 const menuButton = document.querySelector('#checkbox-menu');
+const menuButtonConsulta = document.querySelector('#checkbox-menu-consulta');
 const menu = document.querySelector('.sidebar-menu');
+const menuConsulta = document.querySelector('.consulta-menu');
+
+document.getElementById('consultas-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Previne o comportamento padrão de redirecionamento
+
+    // Ativa o menu de consultas
+    var consultasMenu = document.querySelector('.consulta-menu');
+    consultasMenu.classList.toggle('active');
+});
+
+document.getElementById('consultas-link2').addEventListener('click', function(event) {
+    event.preventDefault(); // Previne o comportamento padrão de redirecionamento
+
+    // Ativa o menu de consultas
+    var menu =document.querySelector('.sidebar-menu');
+    var consultasMenu = document.querySelector('.consulta-menu');
+    menu.classList.toggle('active');
+    consultasMenu.classList.toggle('active');
+});
 
 menuButton.addEventListener('change', () => {
     menu.classList.toggle('active');
+});
+
+menuButtonConsulta.addEventListener('change', () => {
+    menuConsulta.classList.toggle('active');
 });
 
 document.addEventListener('DOMContentLoaded', function() {
