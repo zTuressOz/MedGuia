@@ -222,7 +222,7 @@ label span:nth-child(3) {
 
 .texto-retangulo{
     font-family: "Bebas Neue", sans-serif;
-    font-size: 70px;
+    font-size: 30px;
     color: #4DB6AC;
     text-shadow: 0 10px 20px rgba(0, 0, 0, 0.247), 0 10px 30px rgba(0, 0, 0, 0.247);
 }
