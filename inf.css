@@ -35,6 +35,11 @@ footer{
     color: white;
 }
 
+.texto-doenca{
+    font-family: "Bebas Neue", sans-serif;
+    font-size:40px;
+    color: #86e5bd;
+}
 
 body {
     background-color: white;
