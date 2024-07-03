@@ -80,7 +80,7 @@ h1 {
 
 .texto-menu2 {
     font-family: "Varela Round", sans-serif;
-    font-size: 35px;
+    font-size: 30px;
     position: absolute;
     left: 30px;
     top: 310px;
@@ -282,7 +282,7 @@ label span:nth-child(3) {
     transition: 0.5s;
     margin-top: 60px;
     border-radius: 30px;
-    box-shadow: 0 0 10000000px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 1);
     border: 2px solid #00ACC1;
 }
 
@@ -466,8 +466,22 @@ a {
         box-shadow: none;
    }
 
+   .texto-agende{
+    position: fixed;
+    text-align: center;
+    top: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    color: #86e5bd;
+}
+
+
+   .sidebar-menu.active {
+    width: 60%;
+}
+
    .consulta-menu.active{
-    bottom: -38%;
+    bottom: -35%;
 }
 
 #map-container{
@@ -475,6 +489,9 @@ a {
   height:400px;
   margin-top:150px;
 }
+    h2{
+    font-size: 25px;
+    }
 
     h1 {
         font-size: 50px;

@@ -363,7 +363,7 @@ label span:nth-child(3) {
 
 .texto-menu2 {
     font-family: "Varela Round", sans-serif;
-    font-size: 35px;
+    font-size: 30px;
     position: absolute;
     left: 30px;
     top: 310px;
@@ -524,7 +524,7 @@ a {
     }
 
     .sidebar-menu.active {
-        width: 55%;
+        width: 60%;
     }
 
     .texto-retangulo{
